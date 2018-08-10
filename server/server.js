@@ -9,8 +9,8 @@ var http = require('http');
 
 // Serve static files from the React app
 
-app.use(express.static("../../client/build"));
-
+const staticFiles = express.static(path.join(__dirname, '../../client/build'))
+app.use(staticFiles)
 /**
  * Get port from environment and store in Express.
  */
