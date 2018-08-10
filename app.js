@@ -23,6 +23,8 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use('/', indexRouter);
 app.use('/weather', weatherRouter);
 
+// any routes not picked up by the server api will be handled by the react router
+app.use('/*', express.static(path.join(__dirname, 'client/build')));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
