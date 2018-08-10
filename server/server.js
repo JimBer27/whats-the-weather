@@ -1,10 +1,15 @@
 /**
  * Module dependencies.
  */
-
+const express = require('express');
 var app = require('../app');
 var debug = require('debug')('whats-the-weather:server');
 var http = require('http');
+
+// Express only serves static assets in production
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("../client/build"));
+}
 
 /**
  * Get port from environment and store in Express.
