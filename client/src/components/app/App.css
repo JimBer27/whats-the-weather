@@ -26,3 +26,17 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+@media only screen and ( max-width:768px ){
+  
+  
+.App-title {
+  font-size: 1.2em;
+}
+
+.App-header {
+  height: 130px;
+  padding: 10px;
+}
+
+}

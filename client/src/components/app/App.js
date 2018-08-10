@@ -52,7 +52,7 @@ class App extends Component {
         
         const temperature = Math.round(json.data.currently.temperature) + '°';
         this.setState({temperature:temperature});
-        
+
         const apparentTemp = Math.round(json.data.currently.apparentTemperature) + '°';
         this.setState({apparentTemp:apparentTemp});
       
@@ -113,8 +113,8 @@ class App extends Component {
 
     let humidity;
     if(this.state.weather && this.state.weather.humidity){
-      humidity = this.state.weather.humidity;
-      humidity = humidity * 100 + '%';
+      humidity = Math.round(this.state.weather.humidity * 100);
+      humidity = humidity + '%';
       console.log(humidity);
     }
     

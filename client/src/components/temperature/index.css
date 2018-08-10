@@ -5,7 +5,8 @@
 }
 
 .large {
-    font-size: 600%;
+    font-size: 500%;
+    word-wrap: break-word;
 }
 .temperature{
     width:100%;
