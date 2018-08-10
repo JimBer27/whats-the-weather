@@ -8,9 +8,9 @@ var debug = require('debug')('whats-the-weather:server');
 var http = require('http');
 
 // Serve static files from the React app
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("../client/build"));
-}
+
+app.use(express.static("../client/build"));
+
 /**
  * Get port from environment and store in Express.
  */
