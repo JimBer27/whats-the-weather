@@ -1,9 +1,5 @@
 .alert {
-    background-color: lightcoral;
-    color: white;
-    padding: 20px;
-}
-
-.box {
-    background-color: purple;
+    background-color: pink;
+    color: darkred;
+    padding:5px;
 }

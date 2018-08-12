@@ -133,12 +133,15 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">What's the weather like today?</h1>
         </header>
-        {alert}
-      
-        <div className="container">
-          <div className="box"><Summary temperature = {this.state.temperature} humidity = {humidity} summary = {summary}/> </div>
-          <div className="box"><Temperature temperature = {this.state.apparentTemp} date={date}> </Temperature></div>
-          <div className="box"><Caution temperature = {this.state.apparentTemp}></Caution></div>
+       
+        
+        <div className="content">
+          {alert}
+         
+          <Summary temperature = {this.state.temperature} humidity = {humidity} summary = {summary}/>
+          <Temperature temperature = {this.state.apparentTemp} date={date}> </Temperature>
+          <Caution temperature = {this.state.apparentTemp}></Caution>
+         
         </div>
             
         <Footer />
